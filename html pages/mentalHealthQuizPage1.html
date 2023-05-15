@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mental Health Test</title>
+  <meta name="author" content="Girls Coding Club">
+  <meta name="description" content="A mental health app designed to help show major symptoms of some mental health issues">
+  <meta name="keywords" content="Mental Health Quiz, Mental Health Test, Mental Health Survey">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+  <header><h3>If at anypoint you wish to leave this test there is a button at the bottom of every page that will take you back to the main menu</h3></header>
+  <styleText><p>Welcome to our survey!</p></styleText>
+
+  <form action="index.php" name="myform" method="POST"> <!-- Ask.. Possibly not needed? -->
+
+  *Optional
+  <br><br>
+  First name :<input type="text" name="firstname"><br>
+  Last name : <input type="text" name="lastname"><br><br>
+  *Optional
+  <br><br>
+  First name : <input type="text" name="firstname"><br>
+  Last name : <input type="text" name="lastname"><br><br>
+
+  <fieldset id="group1">
+  1.  Have you ever been bullied?<br><br> <!-- points: 3, 1, 2 -->
+    <input type= "radio" id="q1a1" value=3 value=3 onclick="q1()">Yes<br><br>
+    <input type= "radio" id="q1a2" value=1 onclick="q1()">No<br><br>
+    <input type= "radio" id="q1a3" value=2 onclick="q1()">I'm not sure<br><br>
+  </fieldset>
+  <br><br>
+  <fieldset id="group2">
+  2.   Do you ever feel sad or down?<br><br> <!-- points: 4, 3, 2, 1 -->
+    <input type= "radio" name="Button2" value="group2">All the time<br><br>
+    <input type= "radio" name="Button2" value="group2">Sometimes<br><br>
+    <input type= "radio" name="Button2" value="group2">Rarely<br><br>
+    <input type= "radio" name="Button2" value="group2">Never<br><br>
+  </fieldset>
+  <br><br>
+  <fieldset id="group3">
+  3.  How often are you happy?<br><br> <!-- points: 1, 2, 3, 4 -->
+    <input type= "radio" name="Button3" value= "group3">I'm always happy<br><br>
+    <input type= "radio" name="Button3" value= "group3">I'm happy most of the time<br><br>
+    <input type= "radio" name="Button3" value= "group3">Occasionally<br><br>
+    <input type= "radio" name="Button3" value= "group3"> I never feel happy<br><br>
+  </fieldset>
+  <br><br>
+  <fieldset id="group4">
+  4.   Do you believe you could be possibly suffering from a mental illness?<br><br> <!-- points: 3, 1, 2 -->
+    <input type="radio" name= "button4" value="group4">Yes<br><br>
+    <input type="radio" name= "button4" value= "group4">No<br><br>
+    <input type="radio" name= "button4" value="group4">I'm not sure<br><br>
+  </fieldset>
+  <br><br>
+  <fieldset id="group5">
+  5.   Has anyone ever expressed concern about your mental wellbeing<br><br> <!-- 3, 1, 2, 3 -->
+    <input type="radio" name= "button5" value="group5">Yes, quite a few times<br><br>
+    <input type="radio" name= "button5" value= "group5">Maybe once or twice to check in with me<br><br>
+    <input type="radio" name= "button5" value="group5">No, but they would notice if something is wrong<br><br>
+    <input type="radio" name= "button5" value="group5">No, and I feel like if something was wrong they wouldn't notice<br><br>
+  </fieldset>
+
+    <a href="mentalHealthQuizPage2.html" class="button">Go to next page</a>
+    <br></br>
+    <a href="IntroductionPage.html" class="button">Return To Main Menu</a>
+
+    <link rel="stylesheet" type="text/css" href="12.css">
+    <script src="MHpage1.js"></script>
+  </body>
+</html>
+
+<!-- Notes:
+Max number of points possible - 17
+Min number of points possible - 5
+Number of points required in order to move to mentalHealthQuizPage2 - 13 -->
