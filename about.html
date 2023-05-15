@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VISHD  | About Us</title>
+	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+		 <!-- Favicons -->
+		 <link href="logo.PNG" rel="icon">
+		 <link href="index.html" rel="apple-touch-icon">
+</head>
+<body>
+	<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+		<h3> <img src="logo.PNG" alt="" style="height: 38px ;"> <p style="text-decoration:none;">Saving Lives | Protecting Students | Sharing Knowledge</p></h3>
+			
+			
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+			
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn">Quizzes</a>
+				<div class="dropctn">
+					<a href="./html pages/IntroductionPage.html">Quiz on Physical Fitness </a>
+					<a href="./html pages/IntroductionPage.html"">Quiz on Mental Health </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Drug Abuse  </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Stress Management </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Healthy Relationships </a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">Diseases</a>
+				<div class="dropctn">
+					<a href="disease.html">Adenovirus Infection</a>
+					<a href="disease.html">Sleeping Sickness</a>
+					<a href="disease.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="medicine.html">Vitamin B12</a>
+					<a href="medicine.html">Metformin</a>
+					<a href="medicine.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html">Symptom Checker</a></li>
+			<li><a href="about.html" class="active">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/>
+	<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">About</span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline;">VISHD</span></p>
+	</div>
+	<div style="position: relative; top: 30px; overflow: auto; z-index:-1;">
+		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; background-color: #E6F5FF; letter-spacing: 0.5px;">
+			Veritas Intellegent Smart Health Documentation  is a student portal  used here for Medical Information. This site deals with various kind of medicines, their uses and side-effects. This can be called as the base for Students of Veritas University for finding any information regarding medicines as well as the diseases for which these are used.<br/> <br/>
+			Medicine has opened a reliable methods of curing and protecting student lives. It showed the various ways of diagnosing the diseases of human beings. . For last hundred years' medicinal processes and medical equipment are proved to be the boon to human health for diagnosing properly and for applying proper medicines to the patient. <br/>
+			But what happens if somebody advised you a wrong medicine and you are getting side-effect which are far more adverse than your disease, for helping people from this we provide a well focused platform for checking your symptoms and having the right medical documentations.
+			<br/><br/>
+			<span id="heading">
+				Symptom Checker
+			</span>
+			<br/>
+			Symptom Checker gives you access to a sophisticated medical diagnosis tool. Using the latest searching technologies, the system can take a pattern of symptoms and instantly compute from our database of diseases, the most likely ones.<br/>
+			It is based on the same system that is relied on by doctors and nurses around the world to help with diagnosis and is acknowledged as the clear leader in its field.<br/>
+			
+			<br/><br/>
+			<span id="heading">
+				
+			</span>
+			<br/>
+			
+			<br/><br/>
+		</p>
+	</div>
+	<br/><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">VISHD </p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy |<a href="" style="font-size: 11px;">FeedBack</a></p>
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>KELECHI NWACHUKWU</li>
+				<li>EHIEMERE PEACE SALAMATU</li>
+				<li>COMPUTER SCIENCE DEPARTMENT </li>
+			</ul>
+			
+			</p>
+	</div>
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+</body>
+</html>
