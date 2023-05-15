@@ -1,0 +1,212 @@
+*
+{
+    font-family: "segoe ui light";
+
+}
+body{
+  background-color: #d9d9d9;
+
+}
+#regForm {
+  background-color: #f2f2f2;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+padding-top: 70;
+margin-bottom: 10%;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  cursor: default;
+  margin: 0 1px 0 0;
+  padding: 10px 0px 10px 0px;
+  width: 15%;
+  float: left;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  color: #ffffff;
+  background-color: #4d4d4d;  }
+
+/* jQuery Demo */
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+}
+
+/* Responsive Arrow Progress Bar */
+
+.container {
+  font-family: 'Lato', sans-serif;
+}
+
+.step {
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  cursor: default;
+  margin: 0 1px 0 0;
+  padding: 10px 0px 10px 0px;
+  width: 15%;
+  float: left;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.step a {
+  color: #777;
+  text-decoration: none;
+}
+
+.step:after,
+.step:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -17px;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #ffffff;
+  z-index: 2;
+}
+
+.step:before {
+  right: auto;
+  left: 0;
+  border-left: 17px solid #fff;
+  z-index: 0;
+}
+.step:first-child:before {
+  border: none;
+}
+
+.step:last-child:after {
+border: none;
+}
+
+.step:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.step:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.step span {
+  position: relative;
+}
+
+.step.finish span:before {
+  opacity: 1;
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -10px;
+  font-size: 11px;
+  line-height: 21px;
+}
+
+.step.active {
+  color: #fff;
+  background-color: #999999;
+}
+.step.active a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.step.active:after {
+  border-left: 17px solid #999999;
+}
+
+.step.finish {
+  color: #fff;
+  background-color: #4d4d4d;
+}
+
+.step.finish a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.step.finish:after {
+  border-left: 17px solid #4d4d4d;
+}
+.msafatnav{
+      margin-bottom: 5%;
+      background-color: black;
+  }
+
+.masafatbar{
+    margin-left: 20%;
+    width: 100%;
+}
+
+.workspace
+{
+    width: 100%;
+    padding: 10 10;
+    
+}
+.parent
+{
+  top: 80px;
+}
+.progress{
+  background-color: grey;
+ 
+  width: 75%;
+  
+}
+.text{
+padding :4px;
+  color: black;
+  display: inline-block;
+}

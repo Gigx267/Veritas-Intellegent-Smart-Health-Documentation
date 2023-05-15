@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VISHD  | Quiz</title>
+	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+	 <!-- Favicons -->
+	 <link href="logo.PNG" rel="icon">
+	 <link href="index.html" rel="apple-touch-icon">
+
+	<style type="text/css">
+		
+		span a {
+			text-decoration: none;
+			color: #B03A2E;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3> <img src="logo.PNG" alt="" style="height: 38px ;"> <p style="text-decoration:none;">Saving Lives | Protecting Students | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+				
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn active">Quizzes</a>
+				<div class="dropctn">
+					<a href="./html pages/IntroductionPage.html">Quiz on Physical Fitness </a>
+					<a href="./html pages/IntroductionPage.html"">Quiz on Mental Health </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Drug Abuse  </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Stress Management </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Healthy Relationships </a>
+					
+
+
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">Diseases</a>
+				<div class="dropctn">
+					<a href="disease.html">Adenovirus Infection</a>
+					<a href="disease.html">Sleeping Sickness</a>
+					<a href="disease.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="medicine.html">Vitamin B12</a>
+					<a href="medicine.html">Metformin</a>
+					<a href="medicine.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html">Symptom Checker</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/>
+	
+	<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">  Personalized recommendations</span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline;"></span></p>
+	</div>
+	<div style="position: relative; top: 30px; overflow: auto; z-index:-1;">
+		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; background-color: #E6F5FF; letter-spacing: 0.5px;">
+			
+Based on the data analysis of your input <br>VISHD will generate personalized gudiance 
+on nutrition, exercise , sleep, stress management , and other lifestlye factors that can impact your health lifestyle.
+<BR>VISHD is integrated with healthcare systems with access to medical records analysis, and online health consulation.
+Our analysis takes into account various factors like demographics, medical history, lifestyle, and environmental factors. 
+Health records will be stored securely for continous improvement of student health in Veritas University  and to give a better understanding of the 
+health demographics of Veritas University .
+
+			<br/><br/>
+			<span>
+				<a href="/html pages/IntroductionPage.html">Quiz on Physical Fitness </a><br>
+					<a href="">Quiz on Mental Health </a><br>
+					<a href="/html pages/IntroductionPage.html">Quiz on Mental Health </a><br>
+					<a href="/html pages/IntroductionPage.html">Quiz on Drug Abuse  </a><br>
+					<a href="/html pages/IntroductionPage.html">Quiz on Stress Management </a><br>
+					<a href="/html pages/IntroductionPage.html">Quiz on Healthy Relationships </a>
+					
+
+			</span>
+			<br/><br/>
+		</p>
+	</div>
+
+
+
+
+
+
+	<br/><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">VISHD</p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy |<a href="feedback.php" style="font-size: 11px;">FeedBack</a></p>
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>EHIEMERE PEACE SALAMATU</li>
+				<li>COMPUTER SCIENCE DEPARTMENT </li>
+				<li>KELECHI NWACHUKWU</li>
+			</ul>
+				
+			</p>
+	</div>
+
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+</body>
+</html>

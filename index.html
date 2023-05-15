@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veritas Health Documentation</title>
+	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+		 <!-- Favicons -->
+		 <link href="logo.PNG" rel="icon">
+		 <link href="index.html" rel="apple-touch-icon">
+</head>
+<body>
+	<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+		<h3> <img src="logo.PNG" alt="" style="height: 38px ;"> <p style="text-decoration:none;">Saving Lives | Protecting Students | Sharing Knowledge</p></h3>
+			
+			<form action="" method="GET" autocomplete="off">
+				
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn">Quizzes</a>
+				<div class="dropctn">
+					<a href="./html pages/IntroductionPage.html">Quiz on Physical Fitness </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Mental Health </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Drug Abuse  </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Stress Management </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Healthy Relationships </a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">Diseases</a>
+				<div class="dropctn">
+					<a href="disease.html">Adenovirus Infection</a>
+					<a href="disease.html">Sleeping Sickness</a>
+					<a href="disease.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="medicine.html">Vitamin B12</a>
+					<a href="medicine.html">Metformin</a>
+					<a href="medicine.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html">Symptom Checker</a></li>
+			<li><a href="about.html" >About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/>
+	<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;"></span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline; color: blue;font-weight: 800; font-size: medium;font-family: Georgia, 'Times New Roman', Times, serif;">Veritas Intellegent Smart Health Documentation</p>
+	</div>
+	<div style="position: relative; top: 30px; overflow: auto; z-index:-1;">
+		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; background-color: #E6F5FF;  letter-spacing: 0.5px;">
+			Technologies advancements in healtcare in Nigeria have been been helping Nigerians to make informed 
+            decisions about their health while some citizens still lack the skill in navigating health data due to the vase structures of  healthcare databases.
+            To combat these issues we have developed a program to provide personalized , accessible and actionable health 
+            information and recommendations.<br>The premise of VISHD is a smart health system with reilable documentations which 
+            exploits the idea of the internet of things and improves the already existing health care system in nigeria focusing on the students of 
+            VERITAS UNIVERSITY ABUJA. <BR>This system will aid doctors and medical practitioners to detect
+                various diseases and find a solution without patients having to join a long line for hours 
+                waiting to see a doctor.This application for Veritas University has revolutioizes the existing 
+                health care system and provided support for the health workers, patients and other stakeholders   <br/> <br/>
+
+			<br/><br/>
+			<span id="heading">
+				Symptom Checker
+			</span>
+			<br/>
+			Symptom Checker gives you access to a sophisticated medical diagnosis tool. Using the latest searching technologies, the system can take a pattern of symptoms and instantly compute from our database of diseases, the most likely ones.<br/>
+			It is based on the same system that is relied on by doctors and nurses around the world to help with diagnosis and is acknowledged as the clear leader in its field.<br/>
+			
+			<br/><br/>
+			<span id="heading">
+				
+			</span>
+			<br/>
+			
+			<br/><br/>
+		</p>
+	</div>
+	<br/><br/>
+
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">VISHD </p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy |<a href="" style="font-size: 11px;">FeedBack</a></p>
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>KELECHI NWACHUKWU</li>
+				<li>EHIEMERE PEACE SALAMATU</li>
+				<li>COMPUTER SCIENCE DEPARTMENT </li>
+			</ul>
+			
+			</p>
+	</div>
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+</body>
+</html>
