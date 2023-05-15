@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VISHD | Diseases</title>
+	<link rel="stylesheet" type="text/css" href="diseasepage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
+		 <!-- Favicons -->
+		 <link href="logo.PNG" rel="icon">
+		 <link href="index.html" rel="apple-touch-icon">
+</head>
+<body>
+			<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+		<h3> <img src="logo.PNG" alt="" style="height: 38px ;"> <p style="text-decoration:none;">Saving Lives | Protecting Students | Sharing Knowledge</p></h3>
+			
+			
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+			
+			</form>
+	</div>
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn">Quizzes</a>
+				<div class="dropctn">
+					<a href="./html pages/IntroductionPage.html">Quiz on Physical Fitness </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Mental Health </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Drug Abuse  </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Stress Management </a>
+					<a href="./html pages/IntroductionPage.html">Quiz on Healthy Relationships </a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn active">Diseases</a>
+				<div class="dropctn">
+					<a href="disease.html">Adenovirus Infection</a>
+					<a href="disease.html">Sleeping Sickness</a>
+					<a href="disease.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="medicine.html">Vitamin B12</a>
+					<a href="medicine.html">Metformin</a>
+					<a href="medicine.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html">Symptom Checker</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div>
+<br/><br/><br/>
+		<div style="position: relative; max-width: 100%; top: 70px; z-index:-1; border: 1px solid #00243D; background-color: #CEE4FF;">
+			<p style="font-size: 30px; font-family: 'Droid Sans',sans-serif; text-decoration: underline; text-align: center; color: #070C34;">Diseases</p>
+		</div>
+
+	<div>	
+	<ul class="vertNav">		
+			<li><a href="Anemia.html" target="diseaseframe" class="1" id="linkactive">Anemia</a></li>
+			<li><a href="Diarrhea.html" target="diseaseframe" class="1">Diarrhea</a></li>
+			<li><a href="lungcancer.html" target="diseaseframe" class="1">Lung Cancer</a></li>
+			<li><a href="type2diabetes.html" target="diseaseframe" class="1">Type 2 Diabetes</a></li>
+			<li><a href="CAD.html" target="diseaseframe" class="1">Coronary Artery Disease</a></li>
+			<li><a href="Adenovirus.html" target="diseaseframe" class="1">Adenovirus Infection</a></li>
+			<li><a href="Sleepingsick.html" target="diseaseframe" class="1">Sleeping Sickness</a></li>
+			<li><a href="Arthritiss.html" target="diseaseframe" class="1">Arthritis</a></li>
+			<li><a href="stroke.html" target="diseaseframe" class="1">Stroke</a></li>
+			<li><a href="COPD.html" target="diseaseframe" style="border-bottom: none;" class="1">Chronic Obstructive Pulmonary Disease (COPD)</a></li>
+	</ul>
+
+	<iframe src="Anemia.html" name="diseaseframe" id="framecss">
+		<!-- Frame box -->
+	</iframe>
+	</div>
+	<br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/>
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">VISHD </p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy | <a href="" style="font-size: 11px;">FeedBack</a></p>
+		<hr/>
+			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+			<ul id="credits">
+				<li>KELECHI NWACHUKWU</li>
+				<li>EHIEMERE PEACE SALAMATU</li>
+				<li>COMPUTER SCIENCE DEPARTMENT </li>
+			</ul>
+				
+			</p>
+	</div>
+
+
+	<script type="text/javascript" src="diseasemedicine.js"></script>
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
+
+</body>
+</html>
